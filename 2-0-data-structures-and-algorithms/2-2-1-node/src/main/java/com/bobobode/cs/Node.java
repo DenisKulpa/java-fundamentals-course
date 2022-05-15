@@ -1,13 +1,18 @@
 package com.bobobode.cs;
 
 /**
- * Class {@link Node} is a very simple data structure that consists of an element itself and the reference to the next
- * node. An element can have any value since it's a generic. A reference to the next node allows to link {@link Node}
- * objects and build more comprehensive data structures on top of those liked nodes.
+ * A generic class Node that supports two type params: one for the key and one for the value.
  *
- * @param <T> a generic type T
- * @author Taras Boychuk
+ * @param <K> key type parameter
+ * @param <V> value type parameter
  */
-public class Node<T> {
-    // todo:
+public class Node<K,V> {
+    K key;
+    V value;
+    Node<K,V> next;
+
+    public Node(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
 }
